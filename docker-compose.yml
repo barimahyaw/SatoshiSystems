@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  satoshi.services.query:
+    image: ${DOCKER_REGISTRY-}satoshiservicesquery
+    build:
+      context: .
+      dockerfile: Satoshi.Services.Query/Dockerfile
+    environment:
+        - ASPNETCORE_URLS=http://*:5000
+    ports:
+        - "5000:5000" 

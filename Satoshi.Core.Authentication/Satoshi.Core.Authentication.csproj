@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Satoshi.Core.Authentication.Infrastructure\Satoshi.Core.Authentication.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

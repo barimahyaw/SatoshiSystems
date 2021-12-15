@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Satoshi.Shared.Common.DTO.Response.SalesResponse>
+
+@{
+    ViewData["Title"] = "Product Sales";
+}
+
+<h1>Products Sold with the highest prce and lowest price</h1>
+
+<p>
+    <a asp-action="SaleOrder">Create Sales Order</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Product)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HighestPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LowestPrice)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HighestPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LowestPrice)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
